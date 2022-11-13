@@ -6,9 +6,9 @@ let calcBtn = document.getElementById('addBtn');
 
 counter = 1;
 
-calcBtn.addEventListener('click', addRows);
-
-function addRows() {
+calcBtn.addEventListener('click', function handleClick(event) {
+    // 👇️ if you are submitting a form (prevents page reload)
+    event.preventDefault();
     let x1 = X1.value;
     let y1 = Y1.value;
     let z1 = Z1.value;
@@ -28,4 +28,8 @@ function addRows() {
     table.appendChild(course_name);
     table.appendChild(assignment_name);
     table.appendChild(due_date);
-}
+    // 👇️ clear input field
+    X1.value = '';
+    Y1.value = '';
+    Z1.value = '';
+  });
