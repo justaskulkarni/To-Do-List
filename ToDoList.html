@@ -13,22 +13,27 @@
         <p>S.Y.B.Tech. Information Technology</p>
     </div>
     <div class = "AssignmentDetails">
-        <h3>Enter Name of Course</h3>
-        <input type = "text" id = "courseName">
-        <h3>Enter Name of Assignment</h3>
-        <input type = "text" id = "assgnName">
-        <h3>Enter Due Date</h3>
-        <input type = "text" id = "dueDate">
+        <form id = "myForm">
+            <h3>Enter Name of Course</h3>
+            <input type = "text" id = "courseName">
+            <h3>Enter Name of Assignment</h3>
+            <input type = "text" id = "assgnName">
+            <h3>Enter Due Date</h3>
+            <input type = "text" id = "dueDate">
+            <br>
+            <input type = "button" class = "button" id = "addBtn" value = "Add Element">
+        </form>
     </div>
-    <button class = "button" type = "button" id = "addBtn">Add Element</button>
-    <table id="myTable">
-        <tr>
-            <th>Sr.No.</th>
-            <th>Name of Course</th>
-            <th>Name of Assignment</th>
-            <th>Due Date</th>
-        </tr>
-    </table>
-    <script src = "DynamicTableRowAddition.js"></script>
+    <div class = "rightcolumn">
+        <table id="myTable">
+            <tr>
+                <th>Sr.No.</th>
+                <th>Name of Course</th>
+                <th>Name of Assignment</th>
+                <th>Due Date</th>
+            </tr>
+        </table>
+        <script src = "DynamicTableRowAddition.js"></script>
+    </div>
 </body>
 </html>
