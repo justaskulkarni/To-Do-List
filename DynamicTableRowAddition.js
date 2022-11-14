@@ -22,12 +22,22 @@ calcBtn.addEventListener('click', function handleClick(event) {
     assignment_name.textContent = y1;
     let due_date = document.createElement("td");
     due_date.textContent = z1;
+    let delbtn = document.createElement("td");
+    delbtn.textContent = "delete";
     counter += 1;
     table.appendChild(row)
     table.appendChild(srno);
     table.appendChild(course_name);
     table.appendChild(assignment_name);
     table.appendChild(due_date);
+    table.appendChild(delbtn);
+    var index, t = document.getElementById('myTable');
+    for(var i = 0; i < t.rows.length; i++){
+      t.rows[i].cells[4].onclick = function(){
+        index = this.parentElement.rowIndex;
+        t.deleteRow(index);
+      }
+    }
     // 👇️ clear input field
     X1.value = '';
     Y1.value = '';
